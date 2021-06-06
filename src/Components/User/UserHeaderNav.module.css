@@ -1,0 +1,45 @@
+/* Escolhendo display grid, add 4 colunas com 1 fr em cada e um espaçamento entre as colums de 1rem*/
+.nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+/* Alinhando svg, configurando padrão  */
+.nav a,
+.nav button {
+    background: #eee;
+    border-radius: 0.2rem;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+/* Ao passar o mouse em cima  */
+.nav a:hover,
+.nav a:focus,
+.nav button:hover,
+.nav button:focus {
+    background: white;
+    box-shadow: 0 0 0 3px #eee;
+    border-color: #333;
+    outline: none;
+}
+
+/* Ao estar na rota icone fica selecionado */
+.nav a.active {
+    background: white;
+    box-shadow:  0 0 0 3px #fea;
+    border-color: #fb1;
+}
+
+/* Todos os elementos dentro de svg  */
+.nav a.active svg > * {
+    /* Muda a cor do svg ao estar ativo */
+    fill: #fb1;
+}
