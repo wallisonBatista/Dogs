@@ -43,3 +43,110 @@
     /* Muda a cor do svg ao estar ativo */
     fill: #fb1;
 }
+
+.mobileButton {
+    background: #eee;
+    border-radius: 0.2rem;
+    height: 40px;
+    width: 40px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+.mobileButton::after {
+    /*criando o traço - menu mobile*/
+    content: '';
+    display: block;
+    width: 1.2rem;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+
+    /*criando os outros dois traços criando menu hamburguer*/
+    box-shadow: 0 6px currentColor, 0 -6px currentColor;
+
+    /*Animar o icone ao clicar*/
+    transition: 0.2s;
+}
+
+/*Ao estar ativo mudar cor do icone add sombra e borda*/
+.mobileButton:focus,
+.mobileButton:hover,
+.mobileButtonActive {
+    outline: none;
+    background: white;
+    box-shadow: 0 0 0 3px #fea;
+    border-color: #fb1;
+    color: #fb1;
+}
+
+/*Rotacionando o menu mobile e transformando de traço para ponto */
+.mobileButtonActive::after {
+    transform: rotate(90deg);
+    width: 4px;
+    height: 4px;
+
+    /*Criando os pontinhos ... ao clicar no menuMobile*/
+    box-shadow: 0 8px currentColor, 0 -8px currentColor;
+}
+
+.navMobile {
+    display: block;
+    position: absolute;
+    top: 70px;
+    right: 0px;
+    padding: 1rem;
+    background: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    border-radius: .2rem;
+    transition: translateX(-10px);
+    opacity: 0;
+
+    /*Por causa do position o pointer ainda fica visivel mesmo os itens estando em outro lugar
+     não permitir clicar no local onde os itens ficam invisiveis*/
+    pointer-events: none;
+}
+
+.navMobileActive {
+    transition: .3s;
+    transition: iniitla;
+    opacity: 1;
+    pointer-events: initial;
+    z-index: 100
+}
+
+/*Menu mobile configs */
+.navMobile a,
+.navMobile button {
+    /*Coloca um item abaixo do outro*/
+    display: flex;
+
+    align-items: center;
+    background: none;
+    width: 100%;
+    border: none;
+
+    /*Linha que separa cada item do menu*/
+    border-bottom: 1px solid #eee;
+
+    padding: 0.5rem 0;
+    cursor: pointer;
+}
+
+.navMobile a:hover svg > *,
+.navMobile button:hover svg > * {
+    fill: #fb1;
+}
+
+.navMobile button {
+    border-bottom: none;
+}
+
+.navMobile svg {
+    margin-right: 0.5rem;
+}
