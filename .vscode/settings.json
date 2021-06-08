@@ -5,6 +5,7 @@
         ".gitignore": true,
         "package.json": true,
         "package-lock.json": true,
-        "public": true
+        "public": true,
+        "prettierrc":true
     }
 }
