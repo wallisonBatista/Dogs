@@ -8,7 +8,6 @@ import Login from './Components/Login/Login';
 import User from './Components/User/User';
 import { UserStorage } from './UserContext';
 
-
 function App() {
   return (
     <div>
@@ -20,7 +19,6 @@ function App() {
             <Route path="login/*" element={<Login />} />
             <ProtectedRoute path="conta/*" element={<User />} />
           </Routes>
-          <Footer />
         </UserStorage>
       </BrowserRouter>
     </div>
