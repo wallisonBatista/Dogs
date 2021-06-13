@@ -1,4 +1,4 @@
-/*ocuplar da coluna 2 até a 4 e espanda 2 vezes no height*/
+/*oculpar da coluna 2 até a 4 e espanda 2 vezes no height*/
 .photo:nth-child(2) {
   grid-column: 2 / 4;
   grid-row: span 2;
@@ -12,7 +12,7 @@
 }
 
 /*Coloca o span e a img no mesmo grid um por cima do outro*/
-.photo img {
+.photo > div {
   grid-area: 1/1;
 }
 .visualizacao {
