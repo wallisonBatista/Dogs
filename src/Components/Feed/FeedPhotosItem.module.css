@@ -43,7 +43,7 @@
 /*Voltando grid ao tamnho inicial no segundo filho que foi modificado nas resoluções maiores que 40 rem */
 @media (max-width: 40rem) {
   .photo:nth-child(2) {
-    grid-column: initil;
+    grid-column: initial;
     grid-row: initial;
   }
 }
