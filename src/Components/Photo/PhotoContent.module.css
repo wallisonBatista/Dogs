@@ -27,10 +27,6 @@
   grid-row: 1/4;
 }
 
-.comments {
-  padding: 0 2rem;
-}
-
 .author {
   opacity: 0.5;
   margin-bottom: 1rem;
@@ -74,6 +70,21 @@
   width: 2px;
   background: #333;
   margin-top: 5px;
+}
+
+.single.photo {
+  grid-template-columns: 1fr;
+  height: auto;
+}
+
+.single .details {
+  padding: 1rem 0px 0px 0px;
+}
+
+.single .img {
+  grid-row: 1;
+  border-radius: 0.4rem;
+  overflow: hidden;
 }
 
 @media (max-width: 64rem) {
