@@ -4,7 +4,7 @@ import { ReactComponent as Dogs } from '../Assets/dogs-footer.svg';
 
 const Footer = () => {
   return (
-    <footer className={styles.Footer}>
+    <footer className={styles.footer}>
       <Dogs />
       <p>Dogs. Alguns direitos reservados.</p>
     </footer>
